@@ -13,7 +13,7 @@ config.read('auth.ini')  # All my usernames and passwords for the api
 reddit = praw.Reddit(client_id=config.get('auth', 'reddit_client_id'),
                      client_secret=config.get('auth', 'reddit_client_secret'),
                      password=config.get('auth', 'reddit_password'),
-                     user_agent="Flair your posts bot made by u/J_C___",
+                     user_agent="Flair your posts script made by u/J_C___",
                      username=config.get('auth', 'reddit_username'))
 bot_message = "\r\r^(I am a script. If I did something wrong, ) [^(let me know)](/message/compose/?to=J_C___&subject=Flair_post_bot)"
 logger.info("Posting as: " + str(reddit.user.me()))
