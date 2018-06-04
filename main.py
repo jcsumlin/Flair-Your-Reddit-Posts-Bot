@@ -38,7 +38,7 @@ def reply_bot():
         if (submission.link_flair_text is None) and (datetime.utcnow() - datetime.fromtimestamp(submission.created_utc) >= timedelta(minutes=15)) and submission.id not in posts_replied:
             post = submission.reply("Hey there u/" + submission.author.name + "! Your post has been removed in accordance with rule #1 of this subreddit." + rule_1 + bot_message)
             post.mod.remove()
-            logger.info('Submission replied to:', submission.id)
+            logger.info('Submission removed:' + str(submission.id))
             posts_replied.append(submission.id)
             update_files(posts_replied)
 
