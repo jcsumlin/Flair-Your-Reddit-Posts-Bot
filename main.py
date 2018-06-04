@@ -51,6 +51,7 @@ def update_files(posts_replied):
 
 
 try:
+    logger.info("------Starting: Flair Your Post Bot------")
     while True:
         reply_bot()
 except KeyboardInterrupt:
