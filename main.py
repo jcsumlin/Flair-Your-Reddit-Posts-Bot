@@ -16,7 +16,7 @@ reddit = praw.Reddit(client_id=config.get('auth', 'reddit_client_id'),
                      user_agent="Flair your posts bot made by u/J_C___",
                      username=config.get('auth', 'reddit_username'))
 bot_message = "\r\r^(I am a script. If I did something wrong, ) [^(let me know)](/message/compose/?to=J_C___&subject=Flair_post_bot)"
-logger.info("Posting as: ", reddit.user.me())
+logger.info("Posting as: " + str(reddit.user.me()))
 SUBREDDIT = config.get('auth', 'reddit_subreddit')
 LIMIT = int(config.get('auth', 'reddit_limit'))
 
